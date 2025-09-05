@@ -7,8 +7,8 @@ body {
   align-items: center;
   text-align: center;
 
-  /* Use your PNG file here */
-  background: url('background.png') no-repeat center center fixed;
+  /* Use your JPEG file here */
+  background: url('background.jpeg') no-repeat center center fixed;
   background-size: cover;
 
   font-family: 'Arial', sans-serif;
