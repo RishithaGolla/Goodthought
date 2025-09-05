@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>One Good Thought</title>
+  <style>
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      height: 100vh; 
+      flex-direction: column; 
+      background: #ffeedd; /* soft cream background */
+      text-align: center;
+      color: #333;
+    }
+    #message {
+      margin: 20px;
+      font-size: 1.8em;
+      max-width: 600px;
+      color: #4b3832; /* soft dark brown for text */
+    }
+    button {
+      padding: 12px 25px;
+      font-size: 1em;
+      background: #ff6f61; /* coral / warm red */
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      background: #ff3b2e; /* deeper coral on hover */
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+    h1 {
+      color: #ff6f61; /* match button for harmony */
+    }
+  </style>
+</head>
+<body>
+  <h1>🌸 One Good Thought 🌸</h1>
+  <div id="message">Click the button to get inspired!</div>
+  <button onclick="generateMessage()">Seed</button>
+
+  <script>
+    const goodThoughts = [
+      "Peace begins with a smile.",
+      "Courage grows when you face challenges.",
+      "Patience is a powerful weapon.",
+      "Hard work always pays off.",
+      "Kindness is a true strength.",
+      "A positive mind brings a positive life.",
+      "Small steps lead to big changes.",
+      "Believe in yourself and keep moving.",
+      "Happiness is found within, not outside.",
+      "Every day is a second chance.",
+      "Gratitude turns what we have into enough.",
+      "Dream big, start small.",
+      "You are stronger than you think.",
+      "Let go of what you can't control.",
+      "Good things take time."
+    ];
+
+    function generateMessage() {
+      const random = Math.floor(Math.random() * goodThoughts.length);
+      document.getElementById("message").innerText = goodThoughts[random];
+    }
+  </script>
+</body>
+</html>
